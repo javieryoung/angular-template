@@ -1,0 +1,60 @@
+<div ng-controller="HomeCtrl">
+    <div class="carousel-home">
+      <div uib-carousel active="active" interval="5000" no-transition="false">
+        <div uib-slide class="img-container" ng-repeat="slide in slides track by slide.id" index="slide.id">
+          <img ng-src="{{slide.image}}" style="margin:auto;">
+          <div class="carousel-caption">
+            <h4>{{slide.title}}</h4>
+            <p>{{slide.text}}</p>
+            <button ng-if="slide.button" ui-sref="slide.button.state" class="btn btn-1">{{slide.button.text}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="title col-lg-12">
+        <h2>Week Sales</h2>
+        <h3>The best vegetables ever are one click away!</h3>
+    </div>
+    <div class="col-lg-12 week-sales">
+        <div class="col-lg-3 col-md-6" ng-repeat="item in weeklyFeatured">
+            <div class="sale">
+                <div class="price"><strong>${{item.price}}</strong></div>
+                <img ng-src="{{item.image}}">
+                <div class="info">
+                    <div class="float-left">
+                        <strong>{{item.date}}</strong>
+                        <strong class="name">{{item.name}}</strong>
+                    </div>
+                    <div class="button-go">
+                        <strong><i class="fa fa-3x fa-angle-right"></i></strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="title col-lg-12">
+        <h2>New products</h2>
+        <h3>Lorem ipsum dolor sit amet, nec alia!</h3>
+    </div>
+    <div class="col-lg-12 product-list row">
+        <div class="col-lg-2 col-md-4 col-xs-6 product" ng-repeat="item in newProducts">
+            <img ng-src="{{item.image}}">
+            <div class="info">
+                <p>
+                    <span class="supplier">{{item.supplier}}</span>
+                    <span class="name"><strong>{{item.name}}</strong></span>
+                    <span class="price"><strong>${{item.price}}</strong> <strong class="unity">/ {{item.unity}}</span></strong>
+                </p>
+            </div>
+            <a class="add-to-cart">
+                <i class="fa fa-shopping-cart"></i> Add to cart
+            </a>
+        </div>
+    </div>
+    
+    <div class="title col-lg-12">
+        <h2>Our suppliers</h2>
+        <h3>Lorem ipsum dolor sit amet, nec alia!</h3>
+    </div>
+</div>
+

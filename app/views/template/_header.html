@@ -1,0 +1,48 @@
+<div class="header-menu" ng-controller="HeaderCtrl">
+    <div class="col-xs-6 col-sm-4">
+        <!-- Simple dropdown -->
+        <span uib-dropdown on-toggle="toggled(open)">
+          <a href id="simple-dropdown" uib-dropdown-toggle class="btn btn-default dropdown-toggle">
+            <i class="fa fa-bars"></i> <strong>Menu</strong>
+          </a>
+          <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+            <li><a href> <i class="fa fa-home"></i> Home</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href><i class="fa fa-th"></i> Categories</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href><i class="fa fa-truck"></i> Suppliers</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href><i class="fa fa-user"></i> My Account</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href><i class="fa fa-shopping-cart"></i> Cart</a></li>
+          </ul>
+        </span>
+    </div>
+
+    <div class="col-xs-6 col-sm-4 logo">
+        <p class="text-center">LOGO</p>
+    </div>
+
+    <div class="col-md-4 text-right user-and-cart">
+        
+        <a href class="btn btn-default my-account">
+            <img src="../../assets/images/profile.png" class="img-circle img-thumbnail" width=50>
+            <strong>Javier Young</strong>
+        </a>
+        
+        <span uib-dropdown on-toggle="toggled(open)">
+          <a href id="simple-dropdown" uib-dropdown-toggle class="btn dropdown-toggle btn-3">
+            <i class="fa fa-shopping-cart"></i> <i class="fa fa-caret-down"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-right cart" uib-dropdown-menu aria-labelledby="simple-dropdown">
+            <li ng-repeat="item in items">
+                <img ng-src="{{item.image}}" class="img-thumbnail">
+                <h4> {{item.name}} </h4>
+                <span class="delete"><i class="fa fa-trash"></i></span>
+                <span class="price"><strong>$ {{item.price}}</strong></span>
+                <span class="quantity">x{{item.quantity}} </span> 
+            </li>
+          </ul>
+        </span>
+    </div>
+</div>
