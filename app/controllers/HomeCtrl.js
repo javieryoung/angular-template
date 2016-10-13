@@ -1,4 +1,4 @@
-angular.module('app.controllers').controller('HomeCtrl', ['$scope', 'Item', function($scope, Item) {
+angular.module('app.controllers').controller('HomeCtrl', ['$scope', 'Item', 'Supplier', function($scope, Item, Supplier) {
     $scope.slides = [
         {
             id: 0,
@@ -18,11 +18,13 @@ angular.module('app.controllers').controller('HomeCtrl', ['$scope', 'Item', func
         }
     ]
     
+   
     
     
     
+    $scope.recipes = Item.recipes();
     $scope.weeklyFeatured = Item.weeklyFeatured();
     $scope.newProducts = Item.newProducts();
-    
+    $scope.newSuppliers = Supplier.newSuppliers();
     
 }]);

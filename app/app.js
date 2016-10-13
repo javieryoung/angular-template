@@ -3,6 +3,7 @@ angular.module('app', [
   'ui.router',
   'ui.bootstrap',
   'ngAnimate',
+  'ngMap',
   'angular.less',
   'app.controllers',
   'app.services'
@@ -21,6 +22,24 @@ angular.module('app', [
             'content': {
                 templateUrl: "views/home.html",
                 controller: 'HomeCtrl'
+            }
+        }
+    })
+    .state('app.product', {
+        url: "/product",
+        views: {
+            'content': {
+                templateUrl: "views/product.html",
+                controller: 'ProductCtrl'
+            }
+        }
+    })
+    .state('app.supplier', {
+        url: "/supplier",
+        views: {
+            'content': {
+                templateUrl: "views/supplier.html",
+                controller: 'SupplierCtrl'
             }
         }
     })

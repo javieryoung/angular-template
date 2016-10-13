@@ -153,9 +153,87 @@ angular.module('app.services').factory('Item', [function() {
   }
   
   
+  function recipes() {
+    return [{
+        name: 'Lettuce salad',
+        image: '../assets/images/recipe1.jpg',
+        products: ['Delicious chicken', 'Gigant Lettuce', 'Meat']
+    },{
+        name: 'Baked Chicken',
+        image: '../assets/images/recipe2.jpg',
+        products: ['Tacos', 'Not a Lettuce', 'Sort of Pizza']
+    },{
+        name: 'The Definitive Burger',
+        image: '../assets/images/recipe3.jpg',
+        products: ['Hamburguers', 'Milk', 'Vegetables']
+    }];
+  }
+  
+  function getBySupplier(id) {
+        return [{
+            name: 'Sort of Pzza',
+            price: 7,
+            image: '../assets/images/food-3.jpg',
+            supplier: 'Very Vegetable',
+            unity: 'kg'
+
+        },{
+            name: 'Meat',
+            price: 7,
+            image: '../assets/images/food-4.jpg',
+            supplier: 'Very Vegetable',
+            unity: 'kg'
+
+        },{
+            name: 'Not a Lettuce',
+            price: 7,
+            image: '../assets/images/gallery9.jpg',
+            supplier: 'Very Vegetable',
+            unity: 'kg'
+
+        },{
+            name: 'Little Lettuce',
+            price: 7,
+            image: '../assets/images/gallery8.jpg',
+            supplier: 'Very Vegetable',
+            unity: 'kg'
+
+        },{
+            name: 'Huge Lettuce',
+            price: 13,
+            image: '../assets/images/gallery1.jpg',
+            supplier: 'Very Vegetable',
+            unity: 'kg'
+
+        },{
+            name: 'Milk',
+            price: 7,
+            image: '../assets/images/food-2.jpg',
+            supplier: 'Very Vegetable',
+            unity: 'kg'
+
+        }];
+  }
+  
+  function getById(id) {
+        return {
+            name: 'Huge Lettuce',
+            price: 13,
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum',
+            image: '../assets/images/food-1.jpg',
+            supplier: 'Very Vegetable',
+            unity: 'kg',
+            stars: 4
+        };
+  }
+  
+  
   return { 
       weeklyFeatured: weeklyFeatured,
       newProducts: newProducts,
+      recipes: recipes,
+      getById: getById,
+      getBySupplier: getBySupplier
   }
 
 }]);
