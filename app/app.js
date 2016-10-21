@@ -43,7 +43,30 @@ angular.module('app', [
             }
         }
     })
+    .state('app.login', {
+        url: "/login",
+        views: {
+            'content': {
+                templateUrl: "views/login.html",
+            }
+        }
+    })
+    .state('app.signup', {
+        url: "/signup",
+        views: {
+            'content': {
+                templateUrl: "views/signup.html",
+            }
+        }
+    })
+    .state('app.cart', {
+        url: "/cart",
+        views: {
+            'content': {
+                templateUrl: "views/cart.html",
+                controller: 'CartCtrl'
+            }
+        }
+    })
     $urlRouterProvider.otherwise("/home");
 }])
-
-

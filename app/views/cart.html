@@ -1,0 +1,33 @@
+<div ng-view class="display-block page" class="col-lg-12 page">
+    <div class="col-xs-12">
+        <div class="cart-page">
+            <div class="col-xs-12 cart-line" ng-repeat="item in items">
+                <div class="col-sm-4 col-md-3 name"> 
+                    <img ng-src="{{item.image}}" class="thumbnail"> 
+                    <span>{{item.name}} </span>
+                </div>
+                <div class="col-sm-3 col-md-2 supplier"> 
+                    {{item.supplier}}
+                </div>
+                <div class="col-sm-4 description"> 
+                    <span class="truncate">{{item.description}}</span>
+                </div>
+                <div class="col-sm-3 col-md-2 quantity"> 
+                    <button class="btn btn-outline change-quantity" ng-click="substractQuantity($index)">-</button>
+                    <div class="form-group">
+                        <input class="form-control quantity" ng-model="item.quantity">
+                    </div>
+                    <button class="btn btn-outline-primary change-quantity" ng-click="addQuantity($index)">+</button> 
+                </div>
+                <div class="col-sm-1 price"> 
+                    $ {{ item.quantity * item.price }} 
+                </div>
+            </div>
+            <div class="col-xs-12 checkout">
+                <span class="price">Total: $ {{total}}</span>
+                <button class="btn btn-1">Check out!</button>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-<div ng-controller="HomeCtrl">
+<div ng-view class="display-block" ng-controller="HomeCtrl">
     <div class="carousel-home">
       <div uib-carousel active="active" interval="5000" no-transition="false">
         <div uib-slide class="img-container" ng-repeat="slide in slides track by slide.id" index="slide.id">
@@ -21,7 +21,7 @@
         <h3>The best vegetables ever are one click away!</h3>
     </div>
     <div class="col-lg-12 week-sales">
-        <div class="col-lg-3 col-md-3 col-xs-6" ng-repeat="item in weeklyFeatured">
+        <div class="col-lg-3 col-md-3 col-xs-6" ng-repeat="item in weeklyFeatured" ui-sref="app.product">
             <div class="sale">
                 <div class="price"><strong>${{item.price}}</strong></div>
                 <img ng-src="{{item.image}}">
@@ -42,7 +42,7 @@
         <h3>Lorem ipsum dolor sit amet, nec alia!</h3>
     </div>
     <div class="col-lg-12 product-list">
-        <div class="col-lg-2 col-md-2 col-xs-4 product" ng-repeat="item in newProducts">
+        <div class="col-lg-2 col-md-2 col-xs-4 product" ng-repeat="item in newProducts" ui-sref="app.product">
             <div class="img-cont">
                 <img ng-src="{{item.image}}">
             </div>
@@ -77,7 +77,7 @@
                     <div class="product">
                         <div class="product" ng-repeat="product in recipe.products">
                             <p>
-                                <i class="fa fa-eye"></i>
+                                <i class="fa fa-eye" ui-sref="app.product"></i>
                                 <i class="fa fa-shopping-cart"></i>
                                 {{product}}
                             </p>
@@ -98,7 +98,7 @@
     </div>
     
     <div class="col-lg-12 supplier-list">
-        <div class="col-lg-3 col-md-3 col-xs-12" ng-repeat="supplier in newSuppliers">
+        <div class="col-lg-3 col-md-3 col-xs-12" ng-repeat="supplier in newSuppliers" ui-sref="app.supplier">
             <div class="supplier">
                 <img ng-src="{{supplier.thumb}}">
                 <div class="info">

@@ -4,23 +4,23 @@ angular.module('app.services').factory('Item', [function() {
     return [{
         name: 'Vegetables',
         price: 20,
-        image: '../assets/images/gallery1.jpg',
+        image: '../assets/images/sale1.jpg',
         date: new Date().visual()
         
     },{
         name: 'Pizza',
         price: 20,
-        image: '../assets/images/gallery3.jpg',
+        image: '../assets/images/sale2.jpg',
         date: new Date().visual()
     },{
         name: 'Meat',
         price: 20,
-        image: '../assets/images/gallery5.jpg',
+        image: '../assets/images/sale3.jpg',
         date: new Date().visual()
     },{
         name: 'Tea Break',
         price: 20,
-        image: '../assets/images/gallery6.jpg',
+        image: '../assets/images/sale4.jpg',
         date: new Date().visual()
     }];
   }
@@ -220,7 +220,7 @@ angular.module('app.services').factory('Item', [function() {
             name: 'Huge Lettuce',
             price: 13,
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum',
-            image: '../assets/images/food-1.jpg',
+            image: '../assets/images/product.jpg',
             supplier: 'Very Vegetable',
             unity: 'kg',
             stars: 4

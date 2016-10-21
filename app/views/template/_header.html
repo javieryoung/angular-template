@@ -6,15 +6,15 @@
             <i class="fa fa-bars"></i> <strong>Menu</strong>
           </a>
           <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
-            <li><a href> <i class="fa fa-home"></i> Home</a></li>
+            <li><a href ui-sref="app.home"> <i class="fa fa-home"></i> Home</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href><i class="fa fa-th"></i> Product</a></li>
+            <li><a href ui-sref="app.product"><i class="fa fa-th"></i> Product</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href><i class="fa fa-truck"></i> Supplier</a></li>
+            <li><a href ui-sref="app.supplier"><i class="fa fa-truck"></i> Supplier</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href><i class="fa fa-lock"></i> Log in</a></li>
+            <li><a href ui-sref="app.login"><i class="fa fa-lock"></i> Log in</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href><i class="fa fa-shopping-cart"></i> Cart</a></li>
+            <li><a href ui-sref="app.cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
           </ul>
         </span>
     </div>
@@ -27,7 +27,7 @@
         
         <a href class="btn btn-default my-account">
             <img src="../../assets/images/profile.png" class="img-circle img-thumbnail" width=50>
-            <strong>Javier Young</strong>
+            <strong>John Doe</strong>
         </a>
         
         <span uib-dropdown on-toggle="toggled(open)">
@@ -41,6 +41,9 @@
                 <span class="delete"><i class="fa fa-trash"></i></span>
                 <span class="price"><strong>$ {{item.price}}</strong></span>
                 <span class="quantity">x{{item.quantity}} </span> 
+            </li>
+            <li class="button-cart" ui-sref="app.cart">
+                <button class="btn btn-1">Go to Cart!</button>
             </li>
           </ul>
         </span>
